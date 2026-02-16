@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+
+<suite name="SauceDemo Test Suite" parallel="tests" thread-count="2" verbose="1">
+
+    <listeners>
+        <listener class-name="io.qameta.allure.testng.AllureTestNg"/>
+    </listeners>
+
+    <test name="Smoke Tests">
+        <groups>
+            <run>
+                <include name="smoke"/>
+            </run>
+        </groups>
+        <classes>
+            <class name="testng.LoginTests"/>
+            <class name="testng.ProductTests"/>
+        </classes>
+    </test>
+
+    <test name="Regression Tests">
+        <groups>
+            <run>
+                <include name="regression"/>
+            </run>
+        </groups>
+        <classes>
+            <class name="testng.LoginTests"/>
+            <class name="testng.ProductTests"/>
+            <class name="testng.CheckoutTests"/>
+        </classes>
+    </test>
+
+    <test name="BDD Tests">
+        <classes>
+            <class name="runners.CucumberTestRunner"/>
+        </classes>
+    </test>
+
+</suite>

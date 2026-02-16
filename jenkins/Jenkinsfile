@@ -1,0 +1,223 @@
+pipeline {
+    agent any
+
+    tools {
+        maven 'Maven3.9'
+        jdk 'JDK11'
+    }
+
+    parameters {
+        choice(name: 'BROWSER', choices: ['chrome', 'firefox', 'edge'], description: 'Select browser')
+        choice(name: 'TEST_SUITE', choices: ['smoke', 'regression', 'all'], description: 'Select test suite')
+        boolProp(name: 'RUN_JMETER', defaultValue: false, description: 'Run JMeter performance tests?')
+    }
+
+    environment {
+        EXTENT_REPORT = 'test-output/ExtentReport.html'
+        ALLURE_RESULTS = 'target/allure-results'
+        CUCUMBER_REPORTS = 'target/cucumber-reports'
+    }
+
+    stages {
+        stage('Checkout') {
+            steps {
+                echo '========================================='
+                echo 'STAGE 1: Checking out code from repository'
+                echo '========================================='
+                checkout scm
+            }
+        }
+
+        stage('Build') {
+            steps {
+                echo '========================================='
+                echo 'STAGE 2: Building the project'
+                echo '========================================='
+                script {
+                    if (isUnix()) {
+                        sh 'mvn clean compile -DskipTests'
+                    } else {
+                        bat 'mvn clean compile -DskipTests'
+                    }
+                }
+            }
+        }
+
+        stage('Run Selenium Tests') {
+            steps {
+                echo '========================================='
+                echo 'STAGE 3: Running Selenium Automation Tests'
+                echo "Browser: ${params.BROWSER}"
+                echo "Test Suite: ${params.TEST_SUITE}"
+                echo '========================================='
+                script {
+                    def testCommand = "mvn clean test -Dbrowser=${params.BROWSER}"
+
+                    if (params.TEST_SUITE != 'all') {
+                        testCommand += " -Dcucumber.filter.tags=@${params.TEST_SUITE}"
+                    }
+
+                    if (isUnix()) {
+                        sh testCommand
+                    } else {
+                        bat testCommand
+                    }
+                }
+            }
+        }
+
+        stage('Run JMeter Performance Tests') {
+            when {
+                expression { params.RUN_JMETER == true }
+            }
+            steps {
+                echo '========================================='
+                echo 'STAGE 4: Running JMeter Performance Tests'
+                echo '========================================='
+                script {
+                    if (isUnix()) {
+                        sh '''
+                            jmeter -n -t jmeter/testplans/SauceDemo_LoadTest.jmx \
+                                   -l jmeter/results/results.jtl \
+                                   -e -o jmeter/reports/
+                        '''
+                    } else {
+                        bat '''
+                            jmeter -n -t jmeter/testplans/SauceDemo_LoadTest.jmx ^
+                                   -l jmeter/results/results.jtl ^
+                                   -e -o jmeter/reports/
+                        '''
+                    }
+                }
+            }
+        }
+
+        stage('Generate Allure Report') {
+            steps {
+                echo '========================================='
+                echo 'STAGE 5: Generating Allure Report'
+                echo '========================================='
+                script {
+                    allure([
+                        includeProperties: false,
+                        jdk: '',
+                        properties: [],
+                        reportBuildPolicy: 'ALWAYS',
+                        results: [[path: env.ALLURE_RESULTS]]
+                    ])
+                }
+            }
+        }
+
+        stage('Publish Reports') {
+            steps {
+                echo '========================================='
+                echo 'STAGE 6: Publishing Test Reports'
+                echo '========================================='
+
+                // Publish Cucumber Reports
+                publishHTML([
+                    allowMissing: false,
+                    alwaysLinkToLastBuild: true,
+                    keepAll: true,
+                    reportDir: 'target/cucumber-html-reports',
+                    reportFiles: 'overview-features.html',
+                    reportName: 'Cucumber HTML Report'
+                ])
+
+                // Publish Extent Report
+                publishHTML([
+                    allowMissing: false,
+                    alwaysLinkToLastBuild: true,
+                    keepAll: true,
+                    reportDir: 'test-output',
+                    reportFiles: 'ExtentReport.html',
+                    reportName: 'Extent Report'
+                ])
+
+                // Publish JMeter Report (if executed)
+                script {
+                    if (params.RUN_JMETER) {
+                        publishHTML([
+                            allowMissing: false,
+                            alwaysLinkToLastBuild: true,
+                            keepAll: true,
+                            reportDir: 'jmeter/reports',
+                            reportFiles: 'index.html',
+                            reportName: 'JMeter Performance Report'
+                        ])
+                    }
+                }
+            }
+        }
+    }
+
+    post {
+        always {
+            echo '========================================='
+            echo 'POST BUILD: Cleaning up workspace'
+            echo '========================================='
+
+            // Archive artifacts
+            archiveArtifacts artifacts: '**/screenshots/*.png', allowEmptyArchive: true
+            archiveArtifacts artifacts: '**/logs/*.log', allowEmptyArchive: true
+            archiveArtifacts artifacts: '**/test-output/**/*', allowEmptyArchive: true
+
+            // Clean workspace
+            cleanWs()
+        }
+
+        success {
+            echo '✅ ========================================='
+            echo '✅ BUILD SUCCESSFUL!'
+            echo '✅ All tests passed successfully'
+            echo '✅ ========================================='
+
+            emailext(
+                subject: "✅ Jenkins Build SUCCESS: ${env.JOB_NAME} - Build #${env.BUILD_NUMBER}",
+                body: """
+                    <h2>Build Successful!</h2>
+                    <p><b>Job:</b> ${env.JOB_NAME}</p>
+                    <p><b>Build Number:</b> ${env.BUILD_NUMBER}</p>
+                    <p><b>Browser:</b> ${params.BROWSER}</p>
+                    <p><b>Test Suite:</b> ${params.TEST_SUITE}</p>
+                    <p><b>Build URL:</b> ${env.BUILD_URL}</p>
+                    <p><b>Status:</b> <span style="color:green">SUCCESS ✅</span></p>
+                    <p>Check the attached reports for details.</p>
+                """,
+                to: 'team@example.com',
+                mimeType: 'text/html'
+            )
+        }
+
+        failure {
+            echo '❌ ========================================='
+            echo '❌ BUILD FAILED!'
+            echo '❌ Some tests failed. Check reports for details'
+            echo '❌ ========================================='
+
+            emailext(
+                subject: "❌ Jenkins Build FAILED: ${env.JOB_NAME} - Build #${env.BUILD_NUMBER}",
+                body: """
+                    <h2>Build Failed!</h2>
+                    <p><b>Job:</b> ${env.JOB_NAME}</p>
+                    <p><b>Build Number:</b> ${env.BUILD_NUMBER}</p>
+                    <p><b>Browser:</b> ${params.BROWSER}</p>
+                    <p><b>Test Suite:</b> ${params.TEST_SUITE}</p>
+                    <p><b>Build URL:</b> ${env.BUILD_URL}</p>
+                    <p><b>Status:</b> <span style="color:red">FAILED ❌</span></p>
+                    <p>Please check the console output and test reports for failure details.</p>
+                """,
+                to: 'team@example.com',
+                mimeType: 'text/html'
+            )
+        }
+
+        unstable {
+            echo '⚠️ ========================================='
+            echo '⚠️ BUILD UNSTABLE!'
+            echo '⚠️ Some tests may have issues'
+            echo '⚠️ ========================================='
+        }
+    }
+}
