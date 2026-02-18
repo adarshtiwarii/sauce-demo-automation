@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+
 # 🚀 SauceDemo E2E Test Automation Framework
 
 Complete End-to-End Testing Framework with Selenium, BDD (Cucumber), TestNG, JMeter, and Jenkins.
