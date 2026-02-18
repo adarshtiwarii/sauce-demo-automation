@@ -9,9 +9,6 @@ import utils.DriverManager;
 import constants.AppConstants;
 import io.qameta.allure.*;
 
-/**
- * Login Test Cases using TestNG
- */
 @Epic("Authentication")
 @Feature("User Login")
 public class LoginTests {
@@ -19,137 +16,106 @@ public class LoginTests {
     private LoginPage loginPage;
     private ProductsPage productsPage;
 
+    @BeforeClass
+    public void setupClass() {
+        // Load configuration
+        ConfigReader.getProperty("browser"); // This initializes config
+    }
+
     @BeforeMethod
     public void setUp() {
+        // Initialize driver
         DriverManager.initializeDriver();
+
+        // Initialize page objects AFTER driver is created
         loginPage = new LoginPage(DriverManager.getDriver());
         productsPage = new ProductsPage(DriverManager.getDriver());
+
+        // Navigate to login page
         loginPage.navigateToLoginPage();
     }
 
-    @Test(priority = 1, groups = {"smoke", "regression"},
-            description = "Verify login with valid credentials")
+    @Test(priority = 1, groups = {"smoke", "regression"})
     @Story("Valid Login")
     @Severity(SeverityLevel.BLOCKER)
-    @Description("Test to verify user can login with valid username and password")
     public void testValidLogin() {
-        // Arrange
         String username = ConfigReader.getValidUsername();
         String password = ConfigReader.getValidPassword();
 
-        // Act
-        loginPage.login(username, password);
+        productsPage = loginPage.login(username, password);
 
-        // Assert
         Assert.assertTrue(productsPage.isProductsPageDisplayed(),
                 "User should be redirected to products page");
-        Assert.assertEquals(productsPage.getPageTitle(), AppConstants.PRODUCTS_PAGE_TITLE,
-                "Products page title should match");
+        Assert.assertEquals(productsPage.getPageTitle(), AppConstants.PRODUCTS_PAGE_TITLE);
     }
 
-    @Test(priority = 2, groups = {"regression"},
-            description = "Verify login with invalid username")
+    @Test(priority = 2, groups = {"regression"})
     @Story("Invalid Login")
     @Severity(SeverityLevel.CRITICAL)
     public void testInvalidUsername() {
-        // Arrange
         String invalidUsername = "invalid_user";
         String password = ConfigReader.getValidPassword();
 
-        // Act
         loginPage.login(invalidUsername, password);
 
-        // Assert
-        Assert.assertTrue(loginPage.isErrorMessageDisplayed(),
-                "Error message should be displayed");
-        Assert.assertTrue(loginPage.getErrorMessage().contains("Epic sadface"),
-                "Error message should contain 'Epic sadface'");
+        Assert.assertTrue(loginPage.isErrorMessageDisplayed());
+        Assert.assertTrue(loginPage.getErrorMessage().contains("Epic sadface"));
     }
 
-    @Test(priority = 3, groups = {"regression"},
-            description = "Verify login with invalid password")
+    @Test(priority = 3, groups = {"regression"})
     @Story("Invalid Login")
     @Severity(SeverityLevel.CRITICAL)
     public void testInvalidPassword() {
-        // Arrange
         String username = ConfigReader.getValidUsername();
         String invalidPassword = "invalid_password";
 
-        // Act
         loginPage.login(username, invalidPassword);
 
-        // Assert
-        Assert.assertTrue(loginPage.isErrorMessageDisplayed(),
-                "Error message should be displayed");
-        Assert.assertTrue(loginPage.getErrorMessage().contains("do not match"),
-                "Error message should indicate credentials don't match");
+        Assert.assertTrue(loginPage.isErrorMessageDisplayed());
     }
 
-    @Test(priority = 4, groups = {"regression"},
-            description = "Verify login with locked out user")
+    @Test(priority = 4, groups = {"regression"})
     @Story("Locked User")
     @Severity(SeverityLevel.NORMAL)
     public void testLockedOutUser() {
-        // Arrange
         String lockedUsername = ConfigReader.getLockedUsername();
         String password = ConfigReader.getValidPassword();
 
-        // Act
         loginPage.login(lockedUsername, password);
 
-        // Assert
-        Assert.assertTrue(loginPage.isErrorMessageDisplayed(),
-                "Error message should be displayed for locked user");
-        Assert.assertTrue(loginPage.getErrorMessage().contains("locked out"),
-                "Error message should indicate user is locked out");
+        Assert.assertTrue(loginPage.isErrorMessageDisplayed());
+        Assert.assertTrue(loginPage.getErrorMessage().contains("locked out"));
     }
 
-    @Test(priority = 5, groups = {"regression"},
-            description = "Verify login with empty username")
+    @Test(priority = 5, groups = {"regression"})
     @Story("Empty Credentials")
     @Severity(SeverityLevel.NORMAL)
     public void testEmptyUsername() {
-        // Arrange
-        String username = "";
-        String password = ConfigReader.getValidPassword();
+        loginPage.enterUsername("");
+        loginPage.enterPassword(ConfigReader.getValidPassword());
+        loginPage.clickLoginButton();
 
-        // Act
-        loginPage.login(username, password);
-
-        // Assert
-        Assert.assertTrue(loginPage.isErrorMessageDisplayed(),
-                "Error message should be displayed");
-        Assert.assertTrue(loginPage.getErrorMessage().contains("Username is required"),
-                "Error message should indicate username is required");
+        Assert.assertTrue(loginPage.isErrorMessageDisplayed());
+        Assert.assertTrue(loginPage.getErrorMessage().contains("Username is required"));
     }
 
-    @Test(priority = 6, groups = {"regression"},
-            description = "Verify login with empty password")
+    @Test(priority = 6, groups = {"regression"})
     @Story("Empty Credentials")
     @Severity(SeverityLevel.NORMAL)
     public void testEmptyPassword() {
-        // Arrange
-        String username = ConfigReader.getValidUsername();
-        String password = "";
+        loginPage.enterUsername(ConfigReader.getValidUsername());
+        loginPage.enterPassword("");
+        loginPage.clickLoginButton();
 
-        // Act
-        loginPage.login(username, password);
-
-        // Assert
-        Assert.assertTrue(loginPage.isErrorMessageDisplayed(),
-                "Error message should be displayed");
-        Assert.assertTrue(loginPage.getErrorMessage().contains("Password is required"),
-                "Error message should indicate password is required");
+        Assert.assertTrue(loginPage.isErrorMessageDisplayed());
+        Assert.assertTrue(loginPage.getErrorMessage().contains("Password is required"));
     }
 
-    @Test(priority = 7, groups = {"smoke"},
-            description = "Verify login page elements are displayed")
+    @Test(priority = 7, groups = {"smoke"})
     @Story("Login Page UI")
     @Severity(SeverityLevel.MINOR)
     public void testLoginPageElements() {
-        // Assert
-        Assert.assertTrue(loginPage.isLogoDisplayed(),
-                "Login logo should be displayed");
+        Assert.assertTrue(loginPage.isLogoDisplayed());
     }
 
     @AfterMethod

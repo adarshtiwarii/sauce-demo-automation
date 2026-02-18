@@ -10,9 +10,6 @@ import utils.DriverManager;
 import constants.AppConstants;
 import io.qameta.allure.*;
 
-/**
- * Product Test Cases using TestNG
- */
 @Epic("E-Commerce")
 @Feature("Product Management")
 public class ProductTests {
@@ -21,137 +18,102 @@ public class ProductTests {
     private ProductsPage productsPage;
     private CartPage cartPage;
 
+    @BeforeClass
+    public void setupClass() {
+        ConfigReader.getProperty("browser");
+    }
+
     @BeforeMethod
     public void setUp() {
+        // Initialize driver
         DriverManager.initializeDriver();
+
+        // Initialize page objects
         loginPage = new LoginPage(DriverManager.getDriver());
         productsPage = new ProductsPage(DriverManager.getDriver());
         cartPage = new CartPage(DriverManager.getDriver());
 
-        // Login before each test
+        // Login
         loginPage.navigateToLoginPage();
-        loginPage.login(ConfigReader.getValidUsername(),
-                ConfigReader.getValidPassword());
+        productsPage = loginPage.login(
+                ConfigReader.getValidUsername(),
+                ConfigReader.getValidPassword()
+        );
     }
 
-    @Test(priority = 1, groups = {"smoke", "regression"},
-            description = "Verify products page loads correctly")
+    @Test(priority = 1, groups = {"smoke", "regression"})
     @Story("Products Display")
     @Severity(SeverityLevel.BLOCKER)
     public void testProductsPageLoad() {
-        // Assert
-        Assert.assertTrue(productsPage.isProductsPageDisplayed(),
-                "Products page should be displayed");
-        Assert.assertEquals(productsPage.getPageTitle(),
-                AppConstants.PRODUCTS_PAGE_TITLE,
-                "Page title should be 'Products'");
-        Assert.assertEquals(productsPage.getProductCount(), 6,
-                "Should display 6 products");
+        Assert.assertTrue(productsPage.isProductsPageDisplayed());
+        Assert.assertEquals(productsPage.getPageTitle(), AppConstants.PRODUCTS_PAGE_TITLE);
+        Assert.assertEquals(productsPage.getProductCount(), 6);
     }
 
-    @Test(priority = 2, groups = {"regression"},
-            description = "Verify adding single product to cart")
+    @Test(priority = 2, groups = {"regression"})
     @Story("Add to Cart")
     @Severity(SeverityLevel.CRITICAL)
     public void testAddSingleProductToCart() {
-        // Arrange
         String productName = AppConstants.BACKPACK;
-
-        // Act
         productsPage.addProductToCart(productName);
-
-        // Assert
-        Assert.assertEquals(productsPage.getCartItemCount(), 1,
-                "Cart should contain 1 item");
+        Assert.assertEquals(productsPage.getCartItemCount(), 1);
     }
 
-    @Test(priority = 3, groups = {"regression"},
-            description = "Verify adding multiple products to cart")
+    @Test(priority = 3, groups = {"regression"})
     @Story("Add to Cart")
     @Severity(SeverityLevel.CRITICAL)
     public void testAddMultipleProductsToCart() {
-        // Act
         productsPage.addProductToCart(AppConstants.BACKPACK);
         productsPage.addProductToCart(AppConstants.BIKE_LIGHT);
         productsPage.addProductToCart(AppConstants.BOLT_TSHIRT);
-
-        // Assert
-        Assert.assertEquals(productsPage.getCartItemCount(), 3,
-                "Cart should contain 3 items");
+        Assert.assertEquals(productsPage.getCartItemCount(), 3);
     }
 
-    @Test(priority = 4, groups = {"regression"},
-            description = "Verify removing product from cart")
+    @Test(priority = 4, groups = {"regression"})
     @Story("Remove from Cart")
     @Severity(SeverityLevel.NORMAL)
     public void testRemoveProductFromCart() {
-        // Arrange
         String productName = AppConstants.BACKPACK;
         productsPage.addProductToCart(productName);
-
-        // Act
         productsPage.removeProductFromCart(productName);
-
-        // Assert
-        Assert.assertEquals(productsPage.getCartItemCount(), 0,
-                "Cart should be empty");
+        Assert.assertEquals(productsPage.getCartItemCount(), 0);
     }
 
-    @Test(priority = 5, groups = {"smoke", "regression"},
-            description = "Verify navigation to cart page")
+    @Test(priority = 5, groups = {"smoke", "regression"})
     @Story("Navigation")
     @Severity(SeverityLevel.CRITICAL)
     public void testNavigateToCart() {
-        // Arrange
         productsPage.addProductToCart(AppConstants.BACKPACK);
-
-        // Act
         cartPage = productsPage.clickShoppingCart();
-
-        // Assert
-        Assert.assertTrue(cartPage.isCartPageDisplayed(),
-                "Cart page should be displayed");
-        Assert.assertTrue(cartPage.isProductInCart(AppConstants.BACKPACK),
-                "Product should be in cart");
+        Assert.assertTrue(cartPage.isCartPageDisplayed());
+        Assert.assertTrue(cartPage.isProductInCart(AppConstants.BACKPACK));
     }
 
-    @Test(priority = 6, groups = {"regression"},
-            description = "Verify product sorting - Price Low to High")
+    @Test(priority = 6, groups = {"regression"})
     @Story("Product Sorting")
     @Severity(SeverityLevel.NORMAL)
     public void testSortProductsByPriceLowToHigh() {
-        // Act
         productsPage.sortProducts("Price (low to high)");
-
-        // Assert - Basic verification that sorting happened
-        Assert.assertTrue(productsPage.isProductsPageDisplayed(),
-                "Products should still be displayed after sorting");
+        Assert.assertTrue(productsPage.isProductsPageDisplayed());
     }
 
-    @Test(priority = 7, groups = {"regression"},
-            description = "Verify product sorting - Name A to Z")
+    @Test(priority = 7, groups = {"regression"})
     @Story("Product Sorting")
     @Severity(SeverityLevel.NORMAL)
     public void testSortProductsByNameAZ() {
-        // Act
         productsPage.sortProducts("Name (A to Z)");
-
-        // Assert
-        Assert.assertTrue(productsPage.isProductsPageDisplayed(),
-                "Products should still be displayed after sorting");
+        Assert.assertTrue(productsPage.isProductsPageDisplayed());
     }
 
-    @Test(priority = 8, groups = {"smoke"},
-            description = "Verify logout functionality")
+    @Test(priority = 8, groups = {"smoke"})
     @Story("Logout")
     @Severity(SeverityLevel.CRITICAL)
     public void testLogout() {
-        // Act
-        loginPage = productsPage.logout();
+        // Wait a moment for menu to be ready
+        try { Thread.sleep(1000); } catch (InterruptedException e) {}
 
-        // Assert
-        Assert.assertTrue(loginPage.isLogoDisplayed(),
-                "Should be redirected to login page after logout");
+        loginPage = productsPage.logout();
+        Assert.assertTrue(loginPage.isLogoDisplayed());
     }
 
     @AfterMethod

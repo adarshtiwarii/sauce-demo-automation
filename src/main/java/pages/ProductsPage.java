@@ -1,10 +1,14 @@
 package pages;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 import constants.AppConstants;
 
+import java.time.Duration;
 import java.util.List;
 
 /**
@@ -107,20 +111,73 @@ public class ProductsPage extends BasePage {
     }
 
     /**
-     * Open hamburger menu
+     * Open hamburger menu (FIXED - with proper wait and fallback)
      */
     public ProductsPage openMenu() {
-        click(hamburgerMenu);
+        try {
+            // Wait a moment for any animations to complete
+            Thread.sleep(500);
+
+            // Try regular click first
+            try {
+                WebElement menuButton = waitForElementClickable(hamburgerMenu);
+                menuButton.click();
+                log.info("Hamburger menu clicked (regular)");
+            } catch (Exception e) {
+                // Fallback to JavaScript click
+                log.info("Regular click failed, using JavaScript click");
+                WebElement menuButton = driver.findElement(hamburgerMenu);
+                JavascriptExecutor js = (JavascriptExecutor) driver;
+                js.executeScript("arguments[0].click();", menuButton);
+                log.info("Hamburger menu clicked (JavaScript)");
+            }
+
+            // Wait for menu to be visible
+            Thread.sleep(800);
+
+        } catch (InterruptedException e) {
+            log.error("Thread interrupted while opening menu: " + e.getMessage());
+        }
+
         log.info("Hamburger menu opened");
         return this;
     }
 
     /**
-     * Logout
+     * Logout (FIXED - with proper menu handling)
      */
     public LoginPage logout() {
+        // Open menu first
         openMenu();
-        click(logoutLink);
+
+        try {
+            // Wait for logout link to be clickable
+            WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(5));
+            WebElement logoutElement = wait.until(
+                    ExpectedConditions.elementToBeClickable(logoutLink)
+            );
+
+            // Try regular click
+            try {
+                logoutElement.click();
+                log.info("Logout clicked (regular)");
+            } catch (Exception e) {
+                // Fallback to JavaScript click
+                log.info("Regular logout click failed, using JavaScript");
+                JavascriptExecutor js = (JavascriptExecutor) driver;
+                js.executeScript("arguments[0].click();", logoutElement);
+                log.info("Logout clicked (JavaScript)");
+            }
+
+        } catch (Exception e) {
+            log.error("Failed to click logout: " + e.getMessage());
+            // One more attempt with JavaScript
+            WebElement logoutElement = driver.findElement(logoutLink);
+            JavascriptExecutor js = (JavascriptExecutor) driver;
+            js.executeScript("arguments[0].click();", logoutElement);
+            log.info("Logout clicked (JavaScript fallback)");
+        }
+
         log.info("User logged out");
         return new LoginPage(driver);
     }

@@ -7,9 +7,6 @@ import pages.ProductsPage;
 import utils.ConfigReader;
 import utils.DriverManager;
 
-/**
- * Login Step Definitions
- */
 public class LoginSteps {
 
     private LoginPage loginPage;
@@ -28,12 +25,18 @@ public class LoginSteps {
 
     @When("user enters username {string}")
     public void userEntersUsername(String username) {
-        loginPage.enterUsername(username);
+        // Handle empty string case
+        if (username != null && !username.isEmpty()) {
+            loginPage.enterUsername(username);
+        }
     }
 
     @When("user enters password {string}")
     public void userEntersPassword(String password) {
-        loginPage.enterPassword(password);
+        // Handle empty string case
+        if (password != null && !password.isEmpty()) {
+            loginPage.enterPassword(password);
+        }
     }
 
     @When("user clicks on login button")
@@ -45,7 +48,7 @@ public class LoginSteps {
     public void userLogsInWithValidCredentials() {
         String username = ConfigReader.getValidUsername();
         String password = ConfigReader.getValidPassword();
-        loginPage.login(username, password);
+        productsPage = loginPage.login(username, password);
     }
 
     @Then("user should be redirected to products page")
@@ -70,18 +73,15 @@ public class LoginSteps {
     public void errorMessageShouldContain(String expectedText) {
         String actualMessage = loginPage.getErrorMessage();
         Assert.assertTrue(actualMessage.contains(expectedText),
-                "Error message doesn't contain expected text. Expected: " + expectedText +
-                        ", Actual: " + actualMessage);
+                "Error message doesn't contain expected text");
     }
 
     @Then("login should be {string}")
     public void loginShouldBe(String result) {
         if ("success".equalsIgnoreCase(result)) {
-            Assert.assertTrue(productsPage.isProductsPageDisplayed(),
-                    "Login should be successful");
+            Assert.assertTrue(productsPage.isProductsPageDisplayed());
         } else {
-            Assert.assertTrue(loginPage.isErrorMessageDisplayed(),
-                    "Login should fail");
+            Assert.assertTrue(loginPage.isErrorMessageDisplayed());
         }
     }
 

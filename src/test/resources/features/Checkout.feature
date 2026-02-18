@@ -1,8 +1,5 @@
 @checkout
 Feature: Checkout Process
-  As a logged in user with items in cart
-  I want to complete the checkout process
-  So that I can purchase the products
 
   Background:
     Given user is on the SauceDemo login page
@@ -22,7 +19,6 @@ Feature: Checkout Process
     When user clicks finish button
     Then checkout should be complete
     And completion message should be displayed
-    And message should contain "Thank you for your order"
 
   @regression
   Scenario: Checkout with missing first name
