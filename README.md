@@ -542,10 +542,3 @@ For issues or questions:
 ## 📄 License
 
 This project is for learing purposes.
-
----
-
-**Happy Testing! 🚀**
-=======
-# sauce-demo-automation
->>>>>>> 1f31f0c26c77b43c75c27bab039dfceb3a1ca2c8
