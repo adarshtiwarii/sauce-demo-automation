@@ -1,0 +1,469 @@
+2026-02-18 23:23:35 [TestNG-tests-2] INFO  utils.DriverManager - Chrome Driver initialized
+2026-02-18 23:23:35 [TestNG-tests-2] INFO  utils.DriverManager - Browser window maximized and cookies cleared
+2026-02-18 23:23:35 [TestNG-tests-2] INFO  pages.BasePage - Navigated to: https://www.saucedemo.com/
+2026-02-18 23:23:36 [TestNG-tests-2] INFO  pages.BasePage - Page loaded completely
+2026-02-18 23:23:36 [TestNG-tests-2] INFO  pages.BasePage - Element By.className: login_logo displayed: true
+2026-02-18 23:23:36 [TestNG-tests-2] INFO  pages.BasePage - Waiting for element to be visible: By.id: user-name
+2026-02-18 23:23:37 [TestNG-tests-2] INFO  pages.BasePage - Entered text 'standard_user' in element: By.id: user-name
+2026-02-18 23:23:37 [TestNG-tests-2] INFO  pages.BasePage - Waiting for element to be visible: By.id: password
+2026-02-18 23:23:37 [TestNG-tests-2] INFO  pages.BasePage - Entered text 'secret_sauce' in element: By.id: password
+2026-02-18 23:23:37 [TestNG-tests-2] INFO  pages.BasePage - Waiting for element to be clickable: By.id: login-button
+2026-02-18 23:23:37 [TestNG-tests-2] INFO  pages.BasePage - Clicked on element: By.id: login-button
+2026-02-18 23:23:37 [TestNG-tests-2] INFO  pages.BasePage - Login performed with username: standard_user
+2026-02-18 23:23:37 [TestNG-tests-2] INFO  pages.BasePage - Waiting for element to be clickable: By.id: add-to-cart-sauce-labs-backpack
+2026-02-18 23:23:37 [TestNG-tests-2] INFO  pages.BasePage - Clicked on element: By.id: add-to-cart-sauce-labs-backpack
+2026-02-18 23:23:37 [TestNG-tests-2] INFO  pages.BasePage - Added product to cart: Sauce Labs Backpack
+2026-02-18 23:23:37 [TestNG-tests-2] INFO  pages.BasePage - Waiting for element to be clickable: By.className: shopping_cart_link
+2026-02-18 23:23:38 [TestNG-tests-2] INFO  pages.BasePage - Clicked on element: By.className: shopping_cart_link
+2026-02-18 23:23:38 [TestNG-tests-2] INFO  pages.BasePage - Clicked on shopping cart
+2026-02-18 23:23:38 [TestNG-tests-2] INFO  pages.BasePage - Current URL: https://www.saucedemo.com/cart.html
+2026-02-18 23:23:38 [TestNG-tests-2] INFO  pages.BasePage - Waiting for element to be visible: By.className: title
+2026-02-18 23:23:38 [TestNG-tests-2] INFO  pages.BasePage - Got text 'Your Cart' from element: By.className: title
+2026-02-18 23:23:38 [TestNG-tests-2] INFO  pages.BasePage - Waiting for element to be clickable: By.id: checkout
+2026-02-18 23:23:38 [TestNG-tests-2] INFO  pages.BasePage - Clicked on element: By.id: checkout
+2026-02-18 23:23:38 [TestNG-tests-2] INFO  pages.BasePage - Clicked Checkout
+2026-02-18 23:23:38 [TestNG-tests-2] INFO  pages.BasePage - Waiting for element to be visible: By.id: first-name
+2026-02-18 23:23:59 [TestNG-tests-2] INFO  utils.ScreenshotUtil - Screenshot saved: screenshots/Complete_checkout_with_valid_information_20260218_232359.png
+2026-02-18 23:23:59 [TestNG-tests-2] INFO  utils.DriverManager - Driver quit successfully
+2026-02-18 23:24:01 [TestNG-tests-2] INFO  utils.DriverManager - Chrome Driver initialized
+2026-02-18 23:24:01 [TestNG-tests-2] INFO  utils.DriverManager - Browser window maximized and cookies cleared
+2026-02-18 23:24:02 [TestNG-tests-2] INFO  pages.BasePage - Navigated to: https://www.saucedemo.com/
+2026-02-18 23:24:02 [TestNG-tests-2] INFO  pages.BasePage - Page loaded completely
+2026-02-18 23:24:02 [TestNG-tests-2] INFO  pages.BasePage - Element By.className: login_logo displayed: true
+2026-02-18 23:24:02 [TestNG-tests-2] INFO  pages.BasePage - Waiting for element to be visible: By.id: user-name
+2026-02-18 23:24:02 [TestNG-tests-2] INFO  pages.BasePage - Entered text 'standard_user' in element: By.id: user-name
+2026-02-18 23:24:02 [TestNG-tests-2] INFO  pages.BasePage - Waiting for element to be visible: By.id: password
+2026-02-18 23:24:02 [TestNG-tests-2] INFO  pages.BasePage - Entered text 'secret_sauce' in element: By.id: password
+2026-02-18 23:24:02 [TestNG-tests-2] INFO  pages.BasePage - Waiting for element to be clickable: By.id: login-button
+2026-02-18 23:24:03 [TestNG-tests-2] INFO  pages.BasePage - Clicked on element: By.id: login-button
+2026-02-18 23:24:03 [TestNG-tests-2] INFO  pages.BasePage - Login performed with username: standard_user
+2026-02-18 23:24:03 [TestNG-tests-2] INFO  pages.BasePage - Waiting for element to be clickable: By.id: add-to-cart-sauce-labs-backpack
+2026-02-18 23:24:03 [TestNG-tests-2] INFO  pages.BasePage - Clicked on element: By.id: add-to-cart-sauce-labs-backpack
+2026-02-18 23:24:03 [TestNG-tests-2] INFO  pages.BasePage - Added product to cart: Sauce Labs Backpack
+2026-02-18 23:24:03 [TestNG-tests-2] INFO  pages.BasePage - Waiting for element to be clickable: By.className: shopping_cart_link
+2026-02-18 23:24:03 [TestNG-tests-2] INFO  pages.BasePage - Clicked on element: By.className: shopping_cart_link
+2026-02-18 23:24:03 [TestNG-tests-2] INFO  pages.BasePage - Clicked on shopping cart
+2026-02-18 23:24:03 [TestNG-tests-2] INFO  pages.BasePage - Current URL: https://www.saucedemo.com/cart.html
+2026-02-18 23:24:03 [TestNG-tests-2] INFO  pages.BasePage - Waiting for element to be visible: By.className: title
+2026-02-18 23:24:03 [TestNG-tests-2] INFO  pages.BasePage - Got text 'Your Cart' from element: By.className: title
+2026-02-18 23:24:03 [TestNG-tests-2] INFO  pages.BasePage - Waiting for element to be clickable: By.id: checkout
+2026-02-18 23:24:03 [TestNG-tests-2] INFO  pages.BasePage - Clicked on element: By.id: checkout
+2026-02-18 23:24:03 [TestNG-tests-2] INFO  pages.BasePage - Clicked Checkout
+2026-02-18 23:24:03 [TestNG-tests-2] INFO  pages.BasePage - Waiting for element to be visible: By.id: first-name
+2026-02-18 23:24:04 [TestNG-tests-2] INFO  utils.ScreenshotUtil - Screenshot saved: screenshots/Checkout_with_missing_first_name_20260218_232404.png
+2026-02-18 23:24:04 [TestNG-tests-2] INFO  utils.DriverManager - Driver quit successfully
+2026-02-18 23:24:06 [TestNG-tests-2] INFO  utils.DriverManager - Chrome Driver initialized
+2026-02-18 23:24:06 [TestNG-tests-2] INFO  utils.DriverManager - Browser window maximized and cookies cleared
+2026-02-18 23:24:07 [TestNG-tests-2] INFO  pages.BasePage - Navigated to: https://www.saucedemo.com/
+2026-02-18 23:24:07 [TestNG-tests-2] INFO  pages.BasePage - Page loaded completely
+2026-02-18 23:24:07 [TestNG-tests-2] INFO  pages.BasePage - Element By.className: login_logo displayed: true
+2026-02-18 23:24:07 [TestNG-tests-2] INFO  pages.BasePage - Waiting for element to be visible: By.id: user-name
+2026-02-18 23:24:07 [TestNG-tests-2] INFO  pages.BasePage - Entered text 'standard_user' in element: By.id: user-name
+2026-02-18 23:24:07 [TestNG-tests-2] INFO  pages.BasePage - Waiting for element to be visible: By.id: password
+2026-02-18 23:24:07 [TestNG-tests-2] INFO  pages.BasePage - Entered text 'secret_sauce' in element: By.id: password
+2026-02-18 23:24:07 [TestNG-tests-2] INFO  pages.BasePage - Waiting for element to be clickable: By.id: login-button
+2026-02-18 23:24:08 [TestNG-tests-2] INFO  pages.BasePage - Clicked on element: By.id: login-button
+2026-02-18 23:24:08 [TestNG-tests-2] INFO  pages.BasePage - Login performed with username: standard_user
+2026-02-18 23:24:08 [TestNG-tests-2] INFO  pages.BasePage - Waiting for element to be clickable: By.id: add-to-cart-sauce-labs-backpack
+2026-02-18 23:24:08 [TestNG-tests-2] INFO  pages.BasePage - Clicked on element: By.id: add-to-cart-sauce-labs-backpack
+2026-02-18 23:24:08 [TestNG-tests-2] INFO  pages.BasePage - Added product to cart: Sauce Labs Backpack
+2026-02-18 23:24:08 [TestNG-tests-2] INFO  pages.BasePage - Waiting for element to be clickable: By.className: shopping_cart_link
+2026-02-18 23:24:08 [TestNG-tests-2] INFO  pages.BasePage - Clicked on element: By.className: shopping_cart_link
+2026-02-18 23:24:08 [TestNG-tests-2] INFO  pages.BasePage - Clicked on shopping cart
+2026-02-18 23:24:08 [TestNG-tests-2] INFO  pages.BasePage - Current URL: https://www.saucedemo.com/cart.html
+2026-02-18 23:24:08 [TestNG-tests-2] INFO  pages.BasePage - Waiting for element to be visible: By.className: title
+2026-02-18 23:24:08 [TestNG-tests-2] INFO  pages.BasePage - Got text 'Your Cart' from element: By.className: title
+2026-02-18 23:24:08 [TestNG-tests-2] INFO  pages.BasePage - Waiting for element to be clickable: By.id: checkout
+2026-02-18 23:24:08 [TestNG-tests-2] INFO  pages.BasePage - Clicked on element: By.id: checkout
+2026-02-18 23:24:08 [TestNG-tests-2] INFO  pages.BasePage - Clicked Checkout
+2026-02-18 23:24:08 [TestNG-tests-2] INFO  pages.BasePage - Waiting for element to be visible: By.id: first-name
+2026-02-18 23:24:09 [TestNG-tests-2] INFO  pages.BasePage - Entered text 'John' in element: By.id: first-name
+2026-02-18 23:24:09 [TestNG-tests-2] INFO  pages.BasePage - Waiting for element to be visible: By.id: last-name
+2026-02-18 23:24:09 [TestNG-tests-2] INFO  utils.ScreenshotUtil - Screenshot saved: screenshots/Checkout_with_missing_last_name_20260218_232409.png
+2026-02-18 23:24:09 [TestNG-tests-2] INFO  utils.DriverManager - Driver quit successfully
+2026-02-18 23:24:10 [TestNG-tests-2] INFO  utils.DriverManager - Chrome Driver initialized
+2026-02-18 23:24:10 [TestNG-tests-2] INFO  utils.DriverManager - Browser window maximized and cookies cleared
+2026-02-18 23:24:11 [TestNG-tests-2] INFO  pages.BasePage - Navigated to: https://www.saucedemo.com/
+2026-02-18 23:24:12 [TestNG-tests-2] INFO  pages.BasePage - Page loaded completely
+2026-02-18 23:24:12 [TestNG-tests-2] INFO  pages.BasePage - Element By.className: login_logo displayed: true
+2026-02-18 23:24:12 [TestNG-tests-2] INFO  pages.BasePage - Waiting for element to be visible: By.id: user-name
+2026-02-18 23:24:12 [TestNG-tests-2] INFO  pages.BasePage - Entered text 'standard_user' in element: By.id: user-name
+2026-02-18 23:24:12 [TestNG-tests-2] INFO  pages.BasePage - Waiting for element to be visible: By.id: password
+2026-02-18 23:24:12 [TestNG-tests-2] INFO  pages.BasePage - Entered text 'secret_sauce' in element: By.id: password
+2026-02-18 23:24:12 [TestNG-tests-2] INFO  pages.BasePage - Waiting for element to be clickable: By.id: login-button
+2026-02-18 23:24:12 [TestNG-tests-2] INFO  pages.BasePage - Clicked on element: By.id: login-button
+2026-02-18 23:24:12 [TestNG-tests-2] INFO  pages.BasePage - Login performed with username: standard_user
+2026-02-18 23:24:12 [TestNG-tests-2] INFO  pages.BasePage - Waiting for element to be clickable: By.id: add-to-cart-sauce-labs-backpack
+2026-02-18 23:24:13 [TestNG-tests-2] INFO  pages.BasePage - Clicked on element: By.id: add-to-cart-sauce-labs-backpack
+2026-02-18 23:24:13 [TestNG-tests-2] INFO  pages.BasePage - Added product to cart: Sauce Labs Backpack
+2026-02-18 23:24:13 [TestNG-tests-2] INFO  pages.BasePage - Waiting for element to be clickable: By.className: shopping_cart_link
+2026-02-18 23:24:13 [TestNG-tests-2] INFO  pages.BasePage - Clicked on element: By.className: shopping_cart_link
+2026-02-18 23:24:13 [TestNG-tests-2] INFO  pages.BasePage - Clicked on shopping cart
+2026-02-18 23:24:13 [TestNG-tests-2] INFO  pages.BasePage - Current URL: https://www.saucedemo.com/cart.html
+2026-02-18 23:24:13 [TestNG-tests-2] INFO  pages.BasePage - Waiting for element to be visible: By.className: title
+2026-02-18 23:24:13 [TestNG-tests-2] INFO  pages.BasePage - Got text 'Your Cart' from element: By.className: title
+2026-02-18 23:24:13 [TestNG-tests-2] INFO  pages.BasePage - Waiting for element to be clickable: By.id: checkout
+2026-02-18 23:24:13 [TestNG-tests-2] INFO  pages.BasePage - Clicked on element: By.id: checkout
+2026-02-18 23:24:13 [TestNG-tests-2] INFO  pages.BasePage - Clicked Checkout
+2026-02-18 23:24:13 [TestNG-tests-2] INFO  pages.BasePage - Waiting for element to be visible: By.id: first-name
+2026-02-18 23:24:13 [TestNG-tests-2] INFO  pages.BasePage - Entered text 'John' in element: By.id: first-name
+2026-02-18 23:24:13 [TestNG-tests-2] INFO  pages.BasePage - Waiting for element to be visible: By.id: last-name
+2026-02-18 23:24:14 [TestNG-tests-2] INFO  pages.BasePage - Entered text 'Doe' in element: By.id: last-name
+2026-02-18 23:24:14 [TestNG-tests-2] INFO  pages.BasePage - Waiting for element to be visible: By.id: postal-code
+2026-02-18 23:24:14 [TestNG-tests-2] INFO  utils.ScreenshotUtil - Screenshot saved: screenshots/Checkout_with_missing_postal_code_20260218_232414.png
+2026-02-18 23:24:14 [TestNG-tests-2] INFO  utils.DriverManager - Driver quit successfully
+2026-02-18 23:24:16 [TestNG-tests-2] INFO  utils.DriverManager - Chrome Driver initialized
+2026-02-18 23:24:16 [TestNG-tests-2] INFO  utils.DriverManager - Browser window maximized and cookies cleared
+2026-02-18 23:24:17 [TestNG-tests-2] INFO  pages.BasePage - Navigated to: https://www.saucedemo.com/
+2026-02-18 23:24:17 [TestNG-tests-2] INFO  pages.BasePage - Page loaded completely
+2026-02-18 23:24:17 [TestNG-tests-2] INFO  pages.BasePage - Element By.className: login_logo displayed: true
+2026-02-18 23:24:17 [TestNG-tests-2] INFO  pages.BasePage - Waiting for element to be visible: By.id: user-name
+2026-02-18 23:24:17 [TestNG-tests-2] INFO  pages.BasePage - Entered text 'standard_user' in element: By.id: user-name
+2026-02-18 23:24:17 [TestNG-tests-2] INFO  pages.BasePage - Waiting for element to be visible: By.id: password
+2026-02-18 23:24:17 [TestNG-tests-2] INFO  pages.BasePage - Entered text 'secret_sauce' in element: By.id: password
+2026-02-18 23:24:17 [TestNG-tests-2] INFO  pages.BasePage - Waiting for element to be clickable: By.id: login-button
+2026-02-18 23:24:17 [TestNG-tests-2] INFO  pages.BasePage - Clicked on element: By.id: login-button
+2026-02-18 23:24:17 [TestNG-tests-2] INFO  pages.BasePage - Login performed with username: standard_user
+2026-02-18 23:24:17 [TestNG-tests-2] INFO  pages.BasePage - Waiting for element to be clickable: By.id: add-to-cart-sauce-labs-backpack
+2026-02-18 23:24:17 [TestNG-tests-2] INFO  pages.BasePage - Clicked on element: By.id: add-to-cart-sauce-labs-backpack
+2026-02-18 23:24:17 [TestNG-tests-2] INFO  pages.BasePage - Added product to cart: Sauce Labs Backpack
+2026-02-18 23:24:17 [TestNG-tests-2] INFO  pages.BasePage - Waiting for element to be clickable: By.className: shopping_cart_link
+2026-02-18 23:24:17 [TestNG-tests-2] INFO  pages.BasePage - Clicked on element: By.className: shopping_cart_link
+2026-02-18 23:24:17 [TestNG-tests-2] INFO  pages.BasePage - Clicked on shopping cart
+2026-02-18 23:24:17 [TestNG-tests-2] INFO  pages.BasePage - Current URL: https://www.saucedemo.com/cart.html
+2026-02-18 23:24:17 [TestNG-tests-2] INFO  pages.BasePage - Waiting for element to be visible: By.className: title
+2026-02-18 23:24:18 [TestNG-tests-2] INFO  pages.BasePage - Got text 'Your Cart' from element: By.className: title
+2026-02-18 23:24:18 [TestNG-tests-2] INFO  pages.BasePage - Waiting for element to be clickable: By.id: checkout
+2026-02-18 23:24:18 [TestNG-tests-2] INFO  pages.BasePage - Clicked on element: By.id: checkout
+2026-02-18 23:24:18 [TestNG-tests-2] INFO  pages.BasePage - Clicked Checkout
+2026-02-18 23:24:18 [TestNG-tests-2] INFO  pages.BasePage - Waiting for element to be clickable: By.id: cancel
+2026-02-18 23:24:18 [TestNG-tests-2] INFO  pages.BasePage - Clicked on element: By.id: cancel
+2026-02-18 23:24:18 [TestNG-tests-2] INFO  pages.BasePage - Clicked Cancel button
+2026-02-18 23:24:18 [TestNG-tests-2] INFO  pages.BasePage - Current URL: https://www.saucedemo.com/cart.html
+2026-02-18 23:24:18 [TestNG-tests-2] INFO  pages.BasePage - Waiting for element to be visible: By.className: title
+2026-02-18 23:24:18 [TestNG-tests-2] INFO  pages.BasePage - Got text 'Your Cart' from element: By.className: title
+2026-02-18 23:24:18 [TestNG-tests-2] INFO  utils.DriverManager - Driver quit successfully
+2026-02-18 23:24:20 [TestNG-tests-2] INFO  utils.DriverManager - Chrome Driver initialized
+2026-02-18 23:24:20 [TestNG-tests-2] INFO  utils.DriverManager - Browser window maximized and cookies cleared
+2026-02-18 23:24:20 [TestNG-tests-2] INFO  pages.BasePage - Navigated to: https://www.saucedemo.com/
+2026-02-18 23:24:21 [TestNG-tests-2] INFO  pages.BasePage - Page loaded completely
+2026-02-18 23:24:21 [TestNG-tests-2] INFO  pages.BasePage - Element By.className: login_logo displayed: true
+2026-02-18 23:24:21 [TestNG-tests-2] INFO  pages.BasePage - Waiting for element to be visible: By.id: user-name
+2026-02-18 23:24:21 [TestNG-tests-2] INFO  pages.BasePage - Entered text 'standard_user' in element: By.id: user-name
+2026-02-18 23:24:21 [TestNG-tests-2] INFO  pages.BasePage - Waiting for element to be visible: By.id: password
+2026-02-18 23:24:21 [TestNG-tests-2] INFO  pages.BasePage - Entered text 'secret_sauce' in element: By.id: password
+2026-02-18 23:24:21 [TestNG-tests-2] INFO  pages.BasePage - Waiting for element to be clickable: By.id: login-button
+2026-02-18 23:24:22 [TestNG-tests-2] INFO  pages.BasePage - Clicked on element: By.id: login-button
+2026-02-18 23:24:22 [TestNG-tests-2] INFO  pages.BasePage - Login performed with username: standard_user
+2026-02-18 23:24:22 [TestNG-tests-2] INFO  pages.BasePage - Waiting for element to be clickable: By.id: add-to-cart-sauce-labs-backpack
+2026-02-18 23:24:22 [TestNG-tests-2] INFO  pages.BasePage - Clicked on element: By.id: add-to-cart-sauce-labs-backpack
+2026-02-18 23:24:22 [TestNG-tests-2] INFO  pages.BasePage - Added product to cart: Sauce Labs Backpack
+2026-02-18 23:24:22 [TestNG-tests-2] INFO  pages.BasePage - Waiting for element to be clickable: By.className: shopping_cart_link
+2026-02-18 23:24:22 [TestNG-tests-2] INFO  pages.BasePage - Clicked on element: By.className: shopping_cart_link
+2026-02-18 23:24:22 [TestNG-tests-2] INFO  pages.BasePage - Clicked on shopping cart
+2026-02-18 23:24:22 [TestNG-tests-2] INFO  pages.BasePage - Current URL: https://www.saucedemo.com/cart.html
+2026-02-18 23:24:22 [TestNG-tests-2] INFO  pages.BasePage - Waiting for element to be visible: By.className: title
+2026-02-18 23:24:22 [TestNG-tests-2] INFO  pages.BasePage - Got text 'Your Cart' from element: By.className: title
+2026-02-18 23:24:22 [TestNG-tests-2] INFO  pages.BasePage - Waiting for element to be clickable: By.id: checkout
+2026-02-18 23:24:22 [TestNG-tests-2] INFO  pages.BasePage - Clicked on element: By.id: checkout
+2026-02-18 23:24:22 [TestNG-tests-2] INFO  pages.BasePage - Clicked Checkout
+2026-02-18 23:24:22 [TestNG-tests-2] INFO  pages.BasePage - Waiting for element to be visible: By.id: first-name
+2026-02-18 23:24:22 [TestNG-tests-2] INFO  pages.BasePage - Entered text 'John' in element: By.id: first-name
+2026-02-18 23:24:22 [TestNG-tests-2] INFO  pages.BasePage - Waiting for element to be visible: By.id: last-name
+2026-02-18 23:24:23 [TestNG-tests-2] INFO  pages.BasePage - Entered text 'Doe' in element: By.id: last-name
+2026-02-18 23:24:23 [TestNG-tests-2] INFO  pages.BasePage - Waiting for element to be visible: By.id: postal-code
+2026-02-18 23:24:23 [TestNG-tests-2] INFO  pages.BasePage - Entered text '12345' in element: By.id: postal-code
+2026-02-18 23:24:23 [TestNG-tests-2] INFO  pages.BasePage - Entered checkout information: John Doe, 12345
+2026-02-18 23:24:23 [TestNG-tests-2] INFO  pages.BasePage - Waiting for element to be clickable: By.id: continue
+2026-02-18 23:24:23 [TestNG-tests-2] INFO  pages.BasePage - Clicked on element: By.id: continue
+2026-02-18 23:24:23 [TestNG-tests-2] INFO  pages.BasePage - Clicked Continue button
+2026-02-18 23:24:23 [TestNG-tests-2] INFO  pages.BasePage - Current URL: https://www.saucedemo.com/checkout-step-two.html
+2026-02-18 23:24:23 [TestNG-tests-2] INFO  pages.BasePage - Waiting for element to be visible: By.className: title
+2026-02-18 23:24:23 [TestNG-tests-2] INFO  pages.BasePage - Got text 'Checkout: Overview' from element: By.className: title
+2026-02-18 23:24:23 [TestNG-tests-2] INFO  pages.BasePage - Current URL: https://www.saucedemo.com/checkout-step-two.html
+2026-02-18 23:24:23 [TestNG-tests-2] INFO  pages.BasePage - Waiting for element to be visible: By.className: summary_total_label
+2026-02-18 23:24:23 [TestNG-tests-2] INFO  pages.BasePage - Got text 'Total: $32.39' from element: By.className: summary_total_label
+2026-02-18 23:24:23 [TestNG-tests-2] INFO  utils.DriverManager - Driver quit successfully
+2026-02-18 23:24:25 [TestNG-tests-2] INFO  utils.DriverManager - Chrome Driver initialized
+2026-02-18 23:24:25 [TestNG-tests-2] INFO  utils.DriverManager - Browser window maximized and cookies cleared
+2026-02-18 23:24:26 [TestNG-tests-2] INFO  pages.BasePage - Navigated to: https://www.saucedemo.com/
+2026-02-18 23:24:26 [TestNG-tests-2] INFO  pages.BasePage - Page loaded completely
+2026-02-18 23:24:26 [TestNG-tests-2] INFO  pages.BasePage - Element By.className: login_logo displayed: true
+2026-02-18 23:24:26 [TestNG-tests-2] INFO  pages.BasePage - Waiting for element to be visible: By.id: user-name
+2026-02-18 23:24:26 [TestNG-tests-2] INFO  pages.BasePage - Entered text 'standard_user' in element: By.id: user-name
+2026-02-18 23:24:26 [TestNG-tests-2] INFO  pages.BasePage - Waiting for element to be visible: By.id: password
+2026-02-18 23:24:26 [TestNG-tests-2] INFO  pages.BasePage - Entered text 'secret_sauce' in element: By.id: password
+2026-02-18 23:24:26 [TestNG-tests-2] INFO  pages.BasePage - Waiting for element to be clickable: By.id: login-button
+2026-02-18 23:24:26 [TestNG-tests-2] INFO  pages.BasePage - Clicked on element: By.id: login-button
+2026-02-18 23:24:26 [TestNG-tests-2] INFO  pages.BasePage - Current URL: https://www.saucedemo.com/inventory.html
+2026-02-18 23:24:26 [TestNG-tests-2] INFO  pages.BasePage - Waiting for element to be visible: By.className: title
+2026-02-18 23:24:26 [TestNG-tests-2] INFO  pages.BasePage - Got text 'Products' from element: By.className: title
+2026-02-18 23:24:26 [TestNG-tests-2] INFO  pages.BasePage - Waiting for element to be visible: By.className: title
+2026-02-18 23:24:26 [TestNG-tests-2] INFO  pages.BasePage - Got text 'Products' from element: By.className: title
+2026-02-18 23:24:27 [TestNG-tests-2] INFO  utils.DriverManager - Driver quit successfully
+2026-02-18 23:24:28 [TestNG-tests-2] INFO  utils.DriverManager - Chrome Driver initialized
+2026-02-18 23:24:28 [TestNG-tests-2] INFO  utils.DriverManager - Browser window maximized and cookies cleared
+2026-02-18 23:24:28 [TestNG-tests-2] INFO  pages.BasePage - Navigated to: https://www.saucedemo.com/
+2026-02-18 23:24:30 [TestNG-tests-2] INFO  pages.BasePage - Page loaded completely
+2026-02-18 23:24:30 [TestNG-tests-2] INFO  pages.BasePage - Element By.className: login_logo displayed: true
+2026-02-18 23:24:30 [TestNG-tests-2] INFO  pages.BasePage - Waiting for element to be visible: By.id: user-name
+2026-02-18 23:24:30 [TestNG-tests-2] INFO  pages.BasePage - Entered text 'standard_user' in element: By.id: user-name
+2026-02-18 23:24:30 [TestNG-tests-2] INFO  pages.BasePage - Waiting for element to be visible: By.id: password
+2026-02-18 23:24:30 [TestNG-tests-2] INFO  pages.BasePage - Entered text 'secret_sauce' in element: By.id: password
+2026-02-18 23:24:30 [TestNG-tests-2] INFO  pages.BasePage - Waiting for element to be clickable: By.id: login-button
+2026-02-18 23:24:30 [TestNG-tests-2] INFO  pages.BasePage - Clicked on element: By.id: login-button
+2026-02-18 23:24:30 [TestNG-tests-2] INFO  pages.BasePage - Current URL: https://www.saucedemo.com/inventory.html
+2026-02-18 23:24:30 [TestNG-tests-2] INFO  pages.BasePage - Waiting for element to be visible: By.className: title
+2026-02-18 23:24:30 [TestNG-tests-2] INFO  pages.BasePage - Got text 'Products' from element: By.className: title
+2026-02-18 23:24:31 [TestNG-tests-2] INFO  utils.DriverManager - Driver quit successfully
+2026-02-18 23:24:32 [TestNG-tests-2] INFO  utils.DriverManager - Chrome Driver initialized
+2026-02-18 23:24:32 [TestNG-tests-2] INFO  utils.DriverManager - Browser window maximized and cookies cleared
+2026-02-18 23:24:32 [TestNG-tests-2] INFO  pages.BasePage - Navigated to: https://www.saucedemo.com/
+2026-02-18 23:24:33 [TestNG-tests-2] INFO  pages.BasePage - Page loaded completely
+2026-02-18 23:24:33 [TestNG-tests-2] INFO  pages.BasePage - Element By.className: login_logo displayed: true
+2026-02-18 23:24:33 [TestNG-tests-2] INFO  pages.BasePage - Waiting for element to be visible: By.id: user-name
+2026-02-18 23:24:33 [TestNG-tests-2] INFO  pages.BasePage - Entered text 'locked_out_user' in element: By.id: user-name
+2026-02-18 23:24:33 [TestNG-tests-2] INFO  pages.BasePage - Waiting for element to be visible: By.id: password
+2026-02-18 23:24:33 [TestNG-tests-2] INFO  pages.BasePage - Entered text 'secret_sauce' in element: By.id: password
+2026-02-18 23:24:33 [TestNG-tests-2] INFO  pages.BasePage - Waiting for element to be clickable: By.id: login-button
+2026-02-18 23:24:34 [TestNG-tests-2] INFO  pages.BasePage - Clicked on element: By.id: login-button
+2026-02-18 23:24:34 [TestNG-tests-2] INFO  pages.BasePage - Element By.cssSelector: [data-test='error'] displayed: true
+2026-02-18 23:24:34 [TestNG-tests-2] INFO  utils.DriverManager - Driver quit successfully
+2026-02-18 23:24:35 [TestNG-tests-2] INFO  utils.DriverManager - Chrome Driver initialized
+2026-02-18 23:24:35 [TestNG-tests-2] INFO  utils.DriverManager - Browser window maximized and cookies cleared
+2026-02-18 23:24:36 [TestNG-tests-2] INFO  pages.BasePage - Navigated to: https://www.saucedemo.com/
+2026-02-18 23:24:36 [TestNG-tests-2] INFO  pages.BasePage - Page loaded completely
+2026-02-18 23:24:36 [TestNG-tests-2] INFO  pages.BasePage - Element By.className: login_logo displayed: true
+2026-02-18 23:24:36 [TestNG-tests-2] INFO  pages.BasePage - Waiting for element to be visible: By.id: user-name
+2026-02-18 23:24:36 [TestNG-tests-2] INFO  pages.BasePage - Entered text 'problem_user' in element: By.id: user-name
+2026-02-18 23:24:36 [TestNG-tests-2] INFO  pages.BasePage - Waiting for element to be visible: By.id: password
+2026-02-18 23:24:37 [TestNG-tests-2] INFO  pages.BasePage - Entered text 'secret_sauce' in element: By.id: password
+2026-02-18 23:24:37 [TestNG-tests-2] INFO  pages.BasePage - Waiting for element to be clickable: By.id: login-button
+2026-02-18 23:24:37 [TestNG-tests-2] INFO  pages.BasePage - Clicked on element: By.id: login-button
+2026-02-18 23:24:37 [TestNG-tests-2] INFO  pages.BasePage - Current URL: https://www.saucedemo.com/inventory.html
+2026-02-18 23:24:37 [TestNG-tests-2] INFO  pages.BasePage - Waiting for element to be visible: By.className: title
+2026-02-18 23:24:37 [TestNG-tests-2] INFO  pages.BasePage - Got text 'Products' from element: By.className: title
+2026-02-18 23:24:37 [TestNG-tests-2] INFO  utils.DriverManager - Driver quit successfully
+2026-02-18 23:24:38 [TestNG-tests-2] INFO  utils.DriverManager - Chrome Driver initialized
+2026-02-18 23:24:38 [TestNG-tests-2] INFO  utils.DriverManager - Browser window maximized and cookies cleared
+2026-02-18 23:24:39 [TestNG-tests-2] INFO  pages.BasePage - Navigated to: https://www.saucedemo.com/
+2026-02-18 23:24:39 [TestNG-tests-2] INFO  pages.BasePage - Page loaded completely
+2026-02-18 23:24:39 [TestNG-tests-2] INFO  pages.BasePage - Element By.className: login_logo displayed: true
+2026-02-18 23:24:39 [TestNG-tests-2] INFO  pages.BasePage - Waiting for element to be visible: By.id: user-name
+2026-02-18 23:24:40 [TestNG-tests-2] INFO  pages.BasePage - Entered text 'performance_glitch_user' in element: By.id: user-name
+2026-02-18 23:24:40 [TestNG-tests-2] INFO  pages.BasePage - Waiting for element to be visible: By.id: password
+2026-02-18 23:24:40 [TestNG-tests-2] INFO  pages.BasePage - Entered text 'secret_sauce' in element: By.id: password
+2026-02-18 23:24:40 [TestNG-tests-2] INFO  pages.BasePage - Waiting for element to be clickable: By.id: login-button
+2026-02-18 23:24:45 [TestNG-tests-2] INFO  pages.BasePage - Clicked on element: By.id: login-button
+2026-02-18 23:24:45 [TestNG-tests-2] INFO  pages.BasePage - Current URL: https://www.saucedemo.com/inventory.html
+2026-02-18 23:24:45 [TestNG-tests-2] INFO  pages.BasePage - Waiting for element to be visible: By.className: title
+2026-02-18 23:24:45 [TestNG-tests-2] INFO  pages.BasePage - Got text 'Products' from element: By.className: title
+2026-02-18 23:24:45 [TestNG-tests-2] INFO  utils.DriverManager - Driver quit successfully
+2026-02-18 23:24:46 [TestNG-tests-2] INFO  utils.DriverManager - Chrome Driver initialized
+2026-02-18 23:24:46 [TestNG-tests-2] INFO  utils.DriverManager - Browser window maximized and cookies cleared
+2026-02-18 23:24:47 [TestNG-tests-2] INFO  pages.BasePage - Navigated to: https://www.saucedemo.com/
+2026-02-18 23:24:47 [TestNG-tests-2] INFO  pages.BasePage - Page loaded completely
+2026-02-18 23:24:47 [TestNG-tests-2] INFO  pages.BasePage - Element By.className: login_logo displayed: true
+2026-02-18 23:24:47 [TestNG-tests-2] INFO  pages.BasePage - Waiting for element to be visible: By.id: user-name
+2026-02-18 23:24:48 [TestNG-tests-2] INFO  pages.BasePage - Entered text 'standard_user' in element: By.id: user-name
+2026-02-18 23:24:48 [TestNG-tests-2] INFO  pages.BasePage - Waiting for element to be visible: By.id: password
+2026-02-18 23:24:48 [TestNG-tests-2] INFO  pages.BasePage - Entered text 'secret_sauce' in element: By.id: password
+2026-02-18 23:24:48 [TestNG-tests-2] INFO  pages.BasePage - Waiting for element to be clickable: By.id: login-button
+2026-02-18 23:24:48 [TestNG-tests-2] INFO  pages.BasePage - Clicked on element: By.id: login-button
+2026-02-18 23:24:48 [TestNG-tests-2] INFO  pages.BasePage - Login performed with username: standard_user
+2026-02-18 23:24:48 [TestNG-tests-2] INFO  pages.BasePage - Current URL: https://www.saucedemo.com/inventory.html
+2026-02-18 23:24:48 [TestNG-tests-2] INFO  pages.BasePage - Waiting for element to be visible: By.className: title
+2026-02-18 23:24:48 [TestNG-tests-2] INFO  pages.BasePage - Got text 'Products' from element: By.className: title
+2026-02-18 23:24:48 [TestNG-tests-2] INFO  pages.BasePage - Waiting for element to be visible: By.className: title
+2026-02-18 23:24:48 [TestNG-tests-2] INFO  pages.BasePage - Got text 'Products' from element: By.className: title
+2026-02-18 23:24:48 [TestNG-tests-2] INFO  pages.BasePage - Number of products: 6
+2026-02-18 23:24:48 [TestNG-tests-2] INFO  pages.BasePage - Number of products: 6
+2026-02-18 23:24:49 [TestNG-tests-2] INFO  utils.DriverManager - Driver quit successfully
+2026-02-18 23:24:50 [TestNG-tests-2] INFO  utils.DriverManager - Chrome Driver initialized
+2026-02-18 23:24:50 [TestNG-tests-2] INFO  utils.DriverManager - Browser window maximized and cookies cleared
+2026-02-18 23:24:51 [TestNG-tests-2] INFO  pages.BasePage - Navigated to: https://www.saucedemo.com/
+2026-02-18 23:24:51 [TestNG-tests-2] INFO  pages.BasePage - Page loaded completely
+2026-02-18 23:24:51 [TestNG-tests-2] INFO  pages.BasePage - Element By.className: login_logo displayed: true
+2026-02-18 23:24:51 [TestNG-tests-2] INFO  pages.BasePage - Waiting for element to be visible: By.id: user-name
+2026-02-18 23:24:52 [TestNG-tests-2] INFO  pages.BasePage - Entered text 'standard_user' in element: By.id: user-name
+2026-02-18 23:24:52 [TestNG-tests-2] INFO  pages.BasePage - Waiting for element to be visible: By.id: password
+2026-02-18 23:24:52 [TestNG-tests-2] INFO  pages.BasePage - Entered text 'secret_sauce' in element: By.id: password
+2026-02-18 23:24:52 [TestNG-tests-2] INFO  pages.BasePage - Waiting for element to be clickable: By.id: login-button
+2026-02-18 23:24:52 [TestNG-tests-2] INFO  pages.BasePage - Clicked on element: By.id: login-button
+2026-02-18 23:24:52 [TestNG-tests-2] INFO  pages.BasePage - Login performed with username: standard_user
+2026-02-18 23:24:52 [TestNG-tests-2] INFO  pages.BasePage - Current URL: https://www.saucedemo.com/inventory.html
+2026-02-18 23:24:52 [TestNG-tests-2] INFO  pages.BasePage - Waiting for element to be visible: By.className: title
+2026-02-18 23:24:52 [TestNG-tests-2] INFO  pages.BasePage - Got text 'Products' from element: By.className: title
+2026-02-18 23:24:52 [TestNG-tests-2] INFO  pages.BasePage - Waiting for element to be clickable: By.id: add-to-cart-sauce-labs-backpack
+2026-02-18 23:24:52 [TestNG-tests-2] INFO  pages.BasePage - Clicked on element: By.id: add-to-cart-sauce-labs-backpack
+2026-02-18 23:24:52 [TestNG-tests-2] INFO  pages.BasePage - Added product to cart: Sauce Labs Backpack
+2026-02-18 23:24:52 [TestNG-tests-2] INFO  pages.BasePage - Element By.className: shopping_cart_badge displayed: true
+2026-02-18 23:24:52 [TestNG-tests-2] INFO  pages.BasePage - Waiting for element to be visible: By.className: shopping_cart_badge
+2026-02-18 23:24:52 [TestNG-tests-2] INFO  pages.BasePage - Got text '1' from element: By.className: shopping_cart_badge
+2026-02-18 23:24:52 [TestNG-tests-2] INFO  utils.DriverManager - Driver quit successfully
+2026-02-18 23:24:54 [TestNG-tests-2] INFO  utils.DriverManager - Chrome Driver initialized
+2026-02-18 23:24:54 [TestNG-tests-2] INFO  utils.DriverManager - Browser window maximized and cookies cleared
+2026-02-18 23:24:54 [TestNG-tests-2] INFO  pages.BasePage - Navigated to: https://www.saucedemo.com/
+2026-02-18 23:24:55 [TestNG-tests-2] INFO  pages.BasePage - Page loaded completely
+2026-02-18 23:24:55 [TestNG-tests-2] INFO  pages.BasePage - Element By.className: login_logo displayed: true
+2026-02-18 23:24:55 [TestNG-tests-2] INFO  pages.BasePage - Waiting for element to be visible: By.id: user-name
+2026-02-18 23:24:55 [TestNG-tests-2] INFO  pages.BasePage - Entered text 'standard_user' in element: By.id: user-name
+2026-02-18 23:24:55 [TestNG-tests-2] INFO  pages.BasePage - Waiting for element to be visible: By.id: password
+2026-02-18 23:24:55 [TestNG-tests-2] INFO  pages.BasePage - Entered text 'secret_sauce' in element: By.id: password
+2026-02-18 23:24:55 [TestNG-tests-2] INFO  pages.BasePage - Waiting for element to be clickable: By.id: login-button
+2026-02-18 23:24:55 [TestNG-tests-2] INFO  pages.BasePage - Clicked on element: By.id: login-button
+2026-02-18 23:24:55 [TestNG-tests-2] INFO  pages.BasePage - Login performed with username: standard_user
+2026-02-18 23:24:55 [TestNG-tests-2] INFO  pages.BasePage - Current URL: https://www.saucedemo.com/inventory.html
+2026-02-18 23:24:55 [TestNG-tests-2] INFO  pages.BasePage - Waiting for element to be visible: By.className: title
+2026-02-18 23:24:55 [TestNG-tests-2] INFO  pages.BasePage - Got text 'Products' from element: By.className: title
+2026-02-18 23:24:55 [TestNG-tests-2] INFO  pages.BasePage - Waiting for element to be clickable: By.id: add-to-cart-sauce-labs-backpack
+2026-02-18 23:24:55 [TestNG-tests-2] INFO  pages.BasePage - Clicked on element: By.id: add-to-cart-sauce-labs-backpack
+2026-02-18 23:24:55 [TestNG-tests-2] INFO  pages.BasePage - Added product to cart: Sauce Labs Backpack
+2026-02-18 23:24:55 [TestNG-tests-2] INFO  pages.BasePage - Waiting for element to be clickable: By.id: add-to-cart-sauce-labs-bike-light
+2026-02-18 23:24:55 [TestNG-tests-2] INFO  pages.BasePage - Clicked on element: By.id: add-to-cart-sauce-labs-bike-light
+2026-02-18 23:24:55 [TestNG-tests-2] INFO  pages.BasePage - Added product to cart: Sauce Labs Bike Light
+2026-02-18 23:24:55 [TestNG-tests-2] INFO  pages.BasePage - Waiting for element to be clickable: By.id: add-to-cart-sauce-labs-bolt-t-shirt
+2026-02-18 23:24:56 [TestNG-tests-2] INFO  pages.BasePage - Clicked on element: By.id: add-to-cart-sauce-labs-bolt-t-shirt
+2026-02-18 23:24:56 [TestNG-tests-2] INFO  pages.BasePage - Added product to cart: Sauce Labs Bolt T-Shirt
+2026-02-18 23:24:56 [TestNG-tests-2] INFO  pages.BasePage - Element By.className: shopping_cart_badge displayed: true
+2026-02-18 23:24:56 [TestNG-tests-2] INFO  pages.BasePage - Waiting for element to be visible: By.className: shopping_cart_badge
+2026-02-18 23:24:56 [TestNG-tests-2] INFO  pages.BasePage - Got text '3' from element: By.className: shopping_cart_badge
+2026-02-18 23:24:56 [TestNG-tests-2] INFO  utils.DriverManager - Driver quit successfully
+2026-02-18 23:24:57 [TestNG-tests-2] INFO  utils.DriverManager - Chrome Driver initialized
+2026-02-18 23:24:57 [TestNG-tests-2] INFO  utils.DriverManager - Browser window maximized and cookies cleared
+2026-02-18 23:24:58 [TestNG-tests-2] INFO  pages.BasePage - Navigated to: https://www.saucedemo.com/
+2026-02-18 23:24:58 [TestNG-tests-2] INFO  pages.BasePage - Page loaded completely
+2026-02-18 23:24:58 [TestNG-tests-2] INFO  pages.BasePage - Element By.className: login_logo displayed: true
+2026-02-18 23:24:58 [TestNG-tests-2] INFO  pages.BasePage - Waiting for element to be visible: By.id: user-name
+2026-02-18 23:24:59 [TestNG-tests-2] INFO  pages.BasePage - Entered text 'standard_user' in element: By.id: user-name
+2026-02-18 23:24:59 [TestNG-tests-2] INFO  pages.BasePage - Waiting for element to be visible: By.id: password
+2026-02-18 23:24:59 [TestNG-tests-2] INFO  pages.BasePage - Entered text 'secret_sauce' in element: By.id: password
+2026-02-18 23:24:59 [TestNG-tests-2] INFO  pages.BasePage - Waiting for element to be clickable: By.id: login-button
+2026-02-18 23:24:59 [TestNG-tests-2] INFO  pages.BasePage - Clicked on element: By.id: login-button
+2026-02-18 23:24:59 [TestNG-tests-2] INFO  pages.BasePage - Login performed with username: standard_user
+2026-02-18 23:24:59 [TestNG-tests-2] INFO  pages.BasePage - Current URL: https://www.saucedemo.com/inventory.html
+2026-02-18 23:24:59 [TestNG-tests-2] INFO  pages.BasePage - Waiting for element to be visible: By.className: title
+2026-02-18 23:24:59 [TestNG-tests-2] INFO  pages.BasePage - Got text 'Products' from element: By.className: title
+2026-02-18 23:24:59 [TestNG-tests-2] INFO  pages.BasePage - Waiting for element to be clickable: By.id: add-to-cart-sauce-labs-backpack
+2026-02-18 23:24:59 [TestNG-tests-2] INFO  pages.BasePage - Clicked on element: By.id: add-to-cart-sauce-labs-backpack
+2026-02-18 23:24:59 [TestNG-tests-2] INFO  pages.BasePage - Added product to cart: Sauce Labs Backpack
+2026-02-18 23:24:59 [TestNG-tests-2] INFO  pages.BasePage - Waiting for element to be clickable: By.id: remove-sauce-labs-backpack
+2026-02-18 23:24:59 [TestNG-tests-2] INFO  pages.BasePage - Clicked on element: By.id: remove-sauce-labs-backpack
+2026-02-18 23:24:59 [TestNG-tests-2] INFO  pages.BasePage - Removed product from cart: Sauce Labs Backpack
+2026-02-18 23:25:09 [TestNG-tests-2] INFO  pages.BasePage - Element By.className: shopping_cart_badge not found
+2026-02-18 23:25:10 [TestNG-tests-2] INFO  utils.DriverManager - Driver quit successfully
+2026-02-18 23:25:11 [TestNG-tests-2] INFO  utils.DriverManager - Chrome Driver initialized
+2026-02-18 23:25:11 [TestNG-tests-2] INFO  utils.DriverManager - Browser window maximized and cookies cleared
+2026-02-18 23:25:12 [TestNG-tests-2] INFO  pages.BasePage - Navigated to: https://www.saucedemo.com/
+2026-02-18 23:25:12 [TestNG-tests-2] INFO  pages.BasePage - Page loaded completely
+2026-02-18 23:25:12 [TestNG-tests-2] INFO  pages.BasePage - Element By.className: login_logo displayed: true
+2026-02-18 23:25:12 [TestNG-tests-2] INFO  pages.BasePage - Waiting for element to be visible: By.id: user-name
+2026-02-18 23:25:12 [TestNG-tests-2] INFO  pages.BasePage - Entered text 'standard_user' in element: By.id: user-name
+2026-02-18 23:25:12 [TestNG-tests-2] INFO  pages.BasePage - Waiting for element to be visible: By.id: password
+2026-02-18 23:25:12 [TestNG-tests-2] INFO  pages.BasePage - Entered text 'secret_sauce' in element: By.id: password
+2026-02-18 23:25:12 [TestNG-tests-2] INFO  pages.BasePage - Waiting for element to be clickable: By.id: login-button
+2026-02-18 23:25:13 [TestNG-tests-2] INFO  pages.BasePage - Clicked on element: By.id: login-button
+2026-02-18 23:25:13 [TestNG-tests-2] INFO  pages.BasePage - Login performed with username: standard_user
+2026-02-18 23:25:13 [TestNG-tests-2] INFO  pages.BasePage - Current URL: https://www.saucedemo.com/inventory.html
+2026-02-18 23:25:13 [TestNG-tests-2] INFO  pages.BasePage - Waiting for element to be visible: By.className: title
+2026-02-18 23:25:13 [TestNG-tests-2] INFO  pages.BasePage - Got text 'Products' from element: By.className: title
+2026-02-18 23:25:13 [TestNG-tests-2] INFO  pages.BasePage - Waiting for element to be visible: By.className: product_sort_container
+2026-02-18 23:25:13 [TestNG-tests-2] INFO  pages.BasePage - Selected 'Price (low to high)' from dropdown: By.className: product_sort_container
+2026-02-18 23:25:13 [TestNG-tests-2] INFO  pages.BasePage - Products sorted by: Price (low to high)
+2026-02-18 23:25:13 [TestNG-tests-2] INFO  utils.DriverManager - Driver quit successfully
+2026-02-18 23:25:14 [TestNG-tests-2] INFO  utils.DriverManager - Chrome Driver initialized
+2026-02-18 23:25:15 [TestNG-tests-2] INFO  utils.DriverManager - Browser window maximized and cookies cleared
+2026-02-18 23:25:15 [TestNG-tests-2] INFO  pages.BasePage - Navigated to: https://www.saucedemo.com/
+2026-02-18 23:25:15 [TestNG-tests-2] INFO  pages.BasePage - Page loaded completely
+2026-02-18 23:25:16 [TestNG-tests-2] INFO  pages.BasePage - Element By.className: login_logo displayed: true
+2026-02-18 23:25:16 [TestNG-tests-2] INFO  pages.BasePage - Waiting for element to be visible: By.id: user-name
+2026-02-18 23:25:16 [TestNG-tests-2] INFO  pages.BasePage - Entered text 'standard_user' in element: By.id: user-name
+2026-02-18 23:25:16 [TestNG-tests-2] INFO  pages.BasePage - Waiting for element to be visible: By.id: password
+2026-02-18 23:25:16 [TestNG-tests-2] INFO  pages.BasePage - Entered text 'secret_sauce' in element: By.id: password
+2026-02-18 23:25:16 [TestNG-tests-2] INFO  pages.BasePage - Waiting for element to be clickable: By.id: login-button
+2026-02-18 23:25:16 [TestNG-tests-2] INFO  pages.BasePage - Clicked on element: By.id: login-button
+2026-02-18 23:25:16 [TestNG-tests-2] INFO  pages.BasePage - Login performed with username: standard_user
+2026-02-18 23:25:16 [TestNG-tests-2] INFO  pages.BasePage - Current URL: https://www.saucedemo.com/inventory.html
+2026-02-18 23:25:16 [TestNG-tests-2] INFO  pages.BasePage - Waiting for element to be visible: By.className: title
+2026-02-18 23:25:16 [TestNG-tests-2] INFO  pages.BasePage - Got text 'Products' from element: By.className: title
+2026-02-18 23:25:16 [TestNG-tests-2] INFO  pages.BasePage - Waiting for element to be visible: By.className: product_sort_container
+2026-02-18 23:25:16 [TestNG-tests-2] INFO  pages.BasePage - Selected 'Price (high to low)' from dropdown: By.className: product_sort_container
+2026-02-18 23:25:16 [TestNG-tests-2] INFO  pages.BasePage - Products sorted by: Price (high to low)
+2026-02-18 23:25:17 [TestNG-tests-2] INFO  utils.DriverManager - Driver quit successfully
+2026-02-18 23:25:18 [TestNG-tests-2] INFO  utils.DriverManager - Chrome Driver initialized
+2026-02-18 23:25:18 [TestNG-tests-2] INFO  utils.DriverManager - Browser window maximized and cookies cleared
+2026-02-18 23:25:19 [TestNG-tests-2] INFO  pages.BasePage - Navigated to: https://www.saucedemo.com/
+2026-02-18 23:25:19 [TestNG-tests-2] INFO  pages.BasePage - Page loaded completely
+2026-02-18 23:25:19 [TestNG-tests-2] INFO  pages.BasePage - Element By.className: login_logo displayed: true
+2026-02-18 23:25:19 [TestNG-tests-2] INFO  pages.BasePage - Waiting for element to be visible: By.id: user-name
+2026-02-18 23:25:20 [TestNG-tests-2] INFO  pages.BasePage - Entered text 'standard_user' in element: By.id: user-name
+2026-02-18 23:25:20 [TestNG-tests-2] INFO  pages.BasePage - Waiting for element to be visible: By.id: password
+2026-02-18 23:25:20 [TestNG-tests-2] INFO  pages.BasePage - Entered text 'secret_sauce' in element: By.id: password
+2026-02-18 23:25:20 [TestNG-tests-2] INFO  pages.BasePage - Waiting for element to be clickable: By.id: login-button
+2026-02-18 23:25:20 [TestNG-tests-2] INFO  pages.BasePage - Clicked on element: By.id: login-button
+2026-02-18 23:25:20 [TestNG-tests-2] INFO  pages.BasePage - Login performed with username: standard_user
+2026-02-18 23:25:20 [TestNG-tests-2] INFO  pages.BasePage - Current URL: https://www.saucedemo.com/inventory.html
+2026-02-18 23:25:20 [TestNG-tests-2] INFO  pages.BasePage - Waiting for element to be visible: By.className: title
+2026-02-18 23:25:20 [TestNG-tests-2] INFO  pages.BasePage - Got text 'Products' from element: By.className: title
+2026-02-18 23:25:20 [TestNG-tests-2] INFO  pages.BasePage - Waiting for element to be visible: By.className: product_sort_container
+2026-02-18 23:25:20 [TestNG-tests-2] INFO  pages.BasePage - Selected 'Name (A to Z)' from dropdown: By.className: product_sort_container
+2026-02-18 23:25:20 [TestNG-tests-2] INFO  pages.BasePage - Products sorted by: Name (A to Z)
+2026-02-18 23:25:21 [TestNG-tests-2] INFO  utils.DriverManager - Driver quit successfully
+2026-02-18 23:25:22 [TestNG-tests-2] INFO  utils.DriverManager - Chrome Driver initialized
+2026-02-18 23:25:22 [TestNG-tests-2] INFO  utils.DriverManager - Browser window maximized and cookies cleared
+2026-02-18 23:25:23 [TestNG-tests-2] INFO  pages.BasePage - Navigated to: https://www.saucedemo.com/
+2026-02-18 23:25:23 [TestNG-tests-2] INFO  pages.BasePage - Page loaded completely
+2026-02-18 23:25:23 [TestNG-tests-2] INFO  pages.BasePage - Element By.className: login_logo displayed: true
+2026-02-18 23:25:23 [TestNG-tests-2] INFO  pages.BasePage - Waiting for element to be visible: By.id: user-name
+2026-02-18 23:25:23 [TestNG-tests-2] INFO  pages.BasePage - Entered text 'standard_user' in element: By.id: user-name
+2026-02-18 23:25:23 [TestNG-tests-2] INFO  pages.BasePage - Waiting for element to be visible: By.id: password
+2026-02-18 23:25:23 [TestNG-tests-2] INFO  pages.BasePage - Entered text 'secret_sauce' in element: By.id: password
+2026-02-18 23:25:23 [TestNG-tests-2] INFO  pages.BasePage - Waiting for element to be clickable: By.id: login-button
+2026-02-18 23:25:23 [TestNG-tests-2] INFO  pages.BasePage - Clicked on element: By.id: login-button
+2026-02-18 23:25:23 [TestNG-tests-2] INFO  pages.BasePage - Login performed with username: standard_user
+2026-02-18 23:25:23 [TestNG-tests-2] INFO  pages.BasePage - Current URL: https://www.saucedemo.com/inventory.html
+2026-02-18 23:25:23 [TestNG-tests-2] INFO  pages.BasePage - Waiting for element to be visible: By.className: title
+2026-02-18 23:25:24 [TestNG-tests-2] INFO  pages.BasePage - Got text 'Products' from element: By.className: title
+2026-02-18 23:25:24 [TestNG-tests-2] INFO  pages.BasePage - Waiting for element to be clickable: By.id: add-to-cart-sauce-labs-backpack
+2026-02-18 23:25:24 [TestNG-tests-2] INFO  pages.BasePage - Clicked on element: By.id: add-to-cart-sauce-labs-backpack
+2026-02-18 23:25:24 [TestNG-tests-2] INFO  pages.BasePage - Added product to cart: Sauce Labs Backpack
+2026-02-18 23:25:24 [TestNG-tests-2] INFO  pages.BasePage - Waiting for element to be clickable: By.className: shopping_cart_link
+2026-02-18 23:25:24 [TestNG-tests-2] INFO  pages.BasePage - Clicked on element: By.className: shopping_cart_link
+2026-02-18 23:25:24 [TestNG-tests-2] INFO  pages.BasePage - Clicked on shopping cart
+2026-02-18 23:25:24 [TestNG-tests-2] INFO  pages.BasePage - Current URL: https://www.saucedemo.com/cart.html
+2026-02-18 23:25:24 [TestNG-tests-2] INFO  pages.BasePage - Waiting for element to be visible: By.className: title
+2026-02-18 23:25:24 [TestNG-tests-2] INFO  pages.BasePage - Got text 'Your Cart' from element: By.className: title
+2026-02-18 23:25:24 [TestNG-tests-2] INFO  pages.BasePage - Product 'Sauce Labs Backpack' in cart: true
+2026-02-18 23:25:24 [TestNG-tests-2] INFO  utils.DriverManager - Driver quit successfully
+2026-02-18 23:25:25 [TestNG-tests-2] INFO  utils.DriverManager - Chrome Driver initialized
+2026-02-18 23:25:25 [TestNG-tests-2] INFO  utils.DriverManager - Browser window maximized and cookies cleared
+2026-02-18 23:25:26 [TestNG-tests-2] INFO  pages.BasePage - Navigated to: https://www.saucedemo.com/
+2026-02-18 23:25:26 [TestNG-tests-2] INFO  pages.BasePage - Page loaded completely
+2026-02-18 23:25:27 [TestNG-tests-2] INFO  pages.BasePage - Element By.className: login_logo displayed: true
+2026-02-18 23:25:27 [TestNG-tests-2] INFO  pages.BasePage - Waiting for element to be visible: By.id: user-name
+2026-02-18 23:25:27 [TestNG-tests-2] INFO  pages.BasePage - Entered text 'standard_user' in element: By.id: user-name
+2026-02-18 23:25:27 [TestNG-tests-2] INFO  pages.BasePage - Waiting for element to be visible: By.id: password
+2026-02-18 23:25:27 [TestNG-tests-2] INFO  pages.BasePage - Entered text 'secret_sauce' in element: By.id: password
+2026-02-18 23:25:27 [TestNG-tests-2] INFO  pages.BasePage - Waiting for element to be clickable: By.id: login-button
+2026-02-18 23:25:27 [TestNG-tests-2] INFO  pages.BasePage - Clicked on element: By.id: login-button
+2026-02-18 23:25:27 [TestNG-tests-2] INFO  pages.BasePage - Login performed with username: standard_user
+2026-02-18 23:25:27 [TestNG-tests-2] INFO  pages.BasePage - Current URL: https://www.saucedemo.com/inventory.html
+2026-02-18 23:25:27 [TestNG-tests-2] INFO  pages.BasePage - Waiting for element to be visible: By.className: title
+2026-02-18 23:25:27 [TestNG-tests-2] INFO  pages.BasePage - Got text 'Products' from element: By.className: title
+2026-02-18 23:25:28 [TestNG-tests-2] INFO  pages.BasePage - Waiting for element to be clickable: By.id: react-burger-menu-btn
+2026-02-18 23:25:28 [TestNG-tests-2] INFO  pages.BasePage - Hamburger menu clicked (regular)
+2026-02-18 23:25:29 [TestNG-tests-2] INFO  pages.BasePage - Hamburger menu opened
+2026-02-18 23:25:29 [TestNG-tests-2] INFO  pages.BasePage - Waiting for element to be clickable: By.id: react-burger-menu-btn
+2026-02-18 23:25:31 [TestNG-tests-2] INFO  pages.BasePage - Regular click failed, using JavaScript click
+2026-02-18 23:25:31 [TestNG-tests-2] INFO  pages.BasePage - Hamburger menu clicked (JavaScript)
+2026-02-18 23:25:31 [TestNG-tests-2] INFO  pages.BasePage - Hamburger menu opened
+2026-02-18 23:25:37 [TestNG-tests-2] ERROR pages.BasePage - Failed to click logout: Expected condition failed: waiting for element to be clickable: By.id: logout_sidebar_link (tried for 5 second(s) with 500 milliseconds interval)
+Build info: version: '4.18.1', revision: 'b1d3319b48'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.18'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 144.0.7559.134, chrome: {chromedriverVersion: 144.0.7559.133 (7da823b1d59..., userDataDir: C:\Users\HP\AppData\Local\T...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:51695}, goog:processID: 15552, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:51695/devtoo..., se:cdpVersion: 144.0.7559.134, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: b8f3088e716d45c2a6594ef59e73baf2
+2026-02-18 23:25:37 [TestNG-tests-2] INFO  pages.BasePage - Logout clicked (JavaScript fallback)
+2026-02-18 23:25:37 [TestNG-tests-2] INFO  pages.BasePage - User logged out
+2026-02-18 23:25:37 [TestNG-tests-2] INFO  pages.BasePage - Element By.className: login_logo displayed: true
+2026-02-18 23:25:37 [TestNG-tests-2] INFO  utils.DriverManager - Driver quit successfully

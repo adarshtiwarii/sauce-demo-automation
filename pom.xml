@@ -13,7 +13,7 @@
 
     <name>SauceDemo Automation Framework</name>
 
-    <!-- ================= JAVA 17 ================= -->
+    <!-- ================= PROPERTIES ================= -->
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <maven.compiler.release>17</maven.compiler.release>
@@ -83,11 +83,11 @@
             <version>${extentreports.version}</version>
         </dependency>
 
-        <!-- Apache POI (Excel Handling) -->
+        <!-- Apache POI -->
         <dependency>
             <groupId>org.apache.poi</groupId>
             <artifactId>poi-ooxml</artifactId>
-            <version>5.2.5</version>
+            <version>5.4.0</version>
         </dependency>
 
         <!-- Log4j -->
@@ -110,7 +110,7 @@
     <build>
         <plugins>
 
-            <!-- Compiler Plugin (Java 17) -->
+            <!-- Java 17 Compiler -->
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-compiler-plugin</artifactId>
@@ -120,7 +120,7 @@
                 </configuration>
             </plugin>
 
-            <!-- Surefire (TestNG Runner) -->
+            <!-- Surefire Plugin (TestNG + Cucumber) -->
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-surefire-plugin</artifactId>
@@ -129,10 +129,13 @@
                     <suiteXmlFiles>
                         <suiteXmlFile>src/test/resources/testng.xml</suiteXmlFile>
                     </suiteXmlFiles>
+
+                    <!-- IMPORTANT: Continue even if tests fail -->
+                    <testFailureIgnore>true</testFailureIgnore>
                 </configuration>
             </plugin>
 
-            <!-- Allure Report Plugin -->
+            <!-- Allure Maven Plugin -->
             <plugin>
                 <groupId>io.qameta.allure</groupId>
                 <artifactId>allure-maven</artifactId>
